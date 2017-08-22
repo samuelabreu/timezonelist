@@ -16,7 +16,7 @@ function gmtnumber(number) {
 }
 
 function normalizeabbrv(abbrv) {
-  return abbrv + ((abbrv.length < 3)?"&nbsp;":"");
+  return abbrv + ((abbrv.length < 3)?" ":"");
 }
 
 function create_child(current) {
@@ -51,7 +51,7 @@ function populate_timezone_list() {
     var utc = new Date();
     utc.setHours(utc.getHours() + offset);
     var child = create_child(offset == get_current_offset());
-    child.innerHTML = normalizenumber(utc.getUTCHours()) + ":" + normalizenumber(utc.getUTCMinutes()) + " " + normalizeabbrv(timezones[i].abbr) + " GMT" + gmtnumber(offset);
+    child.textContent = normalizenumber(utc.getUTCHours()) + ":" + normalizenumber(utc.getUTCMinutes()) + " " + normalizeabbrv(timezones[i].abbr) + " GMT" + gmtnumber(offset);
     if (offset == get_current_offset()) {
       ul.insertBefore(child, ul.childNodes[0]);
     } else {
