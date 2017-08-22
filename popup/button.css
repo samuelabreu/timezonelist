@@ -1,0 +1,21 @@
+.container {
+  width: 260px;
+  font-family: monospace;
+  font-size: x-large;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.timezone {
+  text-align: left;
+  
+  padding: 6px 0 6px 20px;
+}
+.timezone:nth-child(even) {
+  background: lightblue;
+}
+.current {
+  font-weight: bold;
+}

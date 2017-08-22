@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "Timezone List",
+    "description": "Name of the extension."
+  },
+  "extensionDescription": {
+    "message": "Timezones mais usados para referência.",
+    "description": "Description of the extension."
+  }
+}
